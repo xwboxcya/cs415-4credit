@@ -131,9 +131,8 @@ public class Game : MonoBehaviour
     public IEnumerator GetMoveFromAPI(string boardState)
     {
         string url = "https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-3B-Instruct/v1/chat/completions";
-        string hfToken = "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"; // 替换为你的 Hugging Face Token
+        string hfToken = "token"; 
         string sanitizedBoardState = boardState.Replace("\n", "\\n").Replace("\r", "").Replace("\"", "\\\"");
-        // 手动构建 JSON 请求体
         string json = $@"
         {{
             ""model"": ""mistralai/Mistral-7B-Instruct-v0.3"",
